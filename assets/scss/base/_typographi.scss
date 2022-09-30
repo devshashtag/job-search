@@ -1,0 +1,51 @@
+body {
+  font-family: iranyekan, Arial, sans-serif;
+}
+
+html {
+  font-size: 0.625rem;
+  direction: rtl;
+  scroll-behavior: smooth;
+
+  @include breakpoint(md) {
+    font-size: 0.5625rem;
+  }
+  @include breakpoint(lg) {
+    font-size: 0.625rem;
+  }
+  @include breakpoint(xl) {
+    font-size: 0.75rem;
+  }
+  @include breakpoint(xxl) {
+    font-size: 0.875rem;
+  }
+  @include breakpoint(elg) {
+    font-size: 1rem;
+  }
+  @include breakpoint(exl) {
+    font-size: 1.125rem;
+  }
+  @include breakpoint(exxl) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(mlg) {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+a {
+  color: $pink-clr;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: 1px solid $white-clr;
+  width: 95%;
+  margin: 0 auto;
+}

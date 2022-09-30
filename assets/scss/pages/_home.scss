@@ -1,0 +1,217 @@
+.home-content {
+  padding: 2rem 0 4rem;
+
+  section .cards {
+    @include flex($fwrap: wrap, $jcnt: center, $gap: 2rem);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+
+    .card {
+      border-radius: 10px;
+      background-color: $gray-clr-3;
+
+      min-width: 20rem;
+      width: 26rem;
+
+      .logo {
+        cursor: pointer;
+      }
+
+      .title {
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      &-footer {
+        padding: 1rem;
+        @include flex($jcnt: space-between);
+      }
+    }
+  }
+
+  .content-jobs {
+    padding: 2rem 5rem 5rem;
+
+    .cards .card {
+      .logo {
+        background-color: white;
+        padding: 1.3rem;
+        border-radius: 50%;
+        width: 6.5rem;
+        margin: 2rem auto;
+        @include flex($dsp: flex, $jcnt: center, $aitem: center);
+      }
+
+      .title {
+        color: $pink-clr;
+        font-size: 1.2rem;
+        font-weight: 300;
+        padding: 0.5rem 1rem;
+      }
+
+      .description {
+        padding: 0.5rem;
+
+        div {
+          color: $black-clr;
+          font-weight: 300;
+          font-size: 1.1rem;
+          margin: 0.5rem 0;
+
+          i {
+            @include flex($dsp: inline-flex, $jcnt: center, $aitem: center);
+            width: 1rem;
+            height: 1rem;
+            padding: 1rem;
+            margin-left: 0.5rem;
+            color: $gray-clr-1;
+          }
+        }
+      }
+
+      &-footer {
+        .icons {
+          i {
+            cursor: pointer;
+            font-size: 1.5rem;
+          }
+
+          .fa-bookmark {
+            color: $yellow-clr;
+            margin-left: 1rem;
+          }
+
+          .fa-share-alt {
+            color: $pink-clr;
+          }
+        }
+
+        .date {
+          color: $pink-clr;
+        }
+      }
+    }
+  }
+
+  .site-features {
+    background: $gradient-clr-center;
+    max-width: 100%;
+    .heading {
+      justify-content: center;
+      .title {
+        font-size: 1.8rem;
+        padding: 0 4rem;
+        &::after {
+          content: "\f0da";
+          font-family: "Font Awesome 5 Free";
+          color: $yellow-clr;
+          font-weight: 900;
+          font-size: 3rem;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          @include flex($jcnt: center, $aitem: center);
+        }
+      }
+    }
+
+    .items {
+      transition: all 0.5s ease;
+      display: grid;
+      gap: 2rem 3rem;
+      justify-content: center;
+      justify-items: center;
+      grid-template-columns: 20rem;
+
+      .item {
+        min-width: 10rem;
+        width: 15rem;
+        i {
+          cursor: pointer;
+          width: 6rem;
+          height: 6rem;
+          padding: 0.5rem;
+          font-size: 3rem;
+          margin: 2rem auto;
+          border-radius: 50%;
+          color: $yellow-clr;
+          background-color: $white-clr;
+          @include flex($jcnt: center, $aitem: center);
+        }
+
+        p {
+          cursor: pointer;
+          font-size: 1.2rem;
+          text-align: center;
+          line-height: 2;
+          font-weight: 500;
+          color: $pink-clr;
+        }
+      }
+    }
+  }
+
+  .content-blog {
+    padding: 5rem 5rem 3rem;
+
+    .cards .card {
+      .logo img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .title {
+        padding: 0.5rem 1rem;
+        padding-bottom: 0;
+        font-size: 1.3rem;
+        font-weight: 200;
+        color: $pink-clr;
+      }
+
+      .description {
+        padding: 0.8rem 1rem 1rem;
+        text-align: justify;
+        font-weight: 300;
+        color: $gray-clr;
+      }
+      &-footer {
+        div {
+          color: $pink-clr;
+        }
+        a {
+          color: $yellow-clr;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .site-features .items {
+      grid-template-columns: 30rem 30rem;
+    }
+  }
+
+  @include breakpoint(md) {
+    section .cards {
+      justify-content: center;
+      .card {
+        width: 30rem;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    section .cards {
+      flex-wrap: nowrap;
+      .card {
+        width: 24rem;
+      }
+    }
+
+    .site-features .items {
+      grid-template-columns: 20rem 20rem 20rem 20rem;
+    }
+  }
+}

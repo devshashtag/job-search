@@ -1,0 +1,41 @@
+.footer {
+  @include flex($fdir: column, $aitem: center);
+  background: $gradient-clr-2;
+  margin: 0 auto;
+
+  &-brand {
+    padding: 5rem 0 3rem;
+    min-width: 15rem;
+  }
+
+  &-logo {
+    @include flex($jcnt: center, $gap: 2.5rem);
+    padding: 1rem 2.5rem;
+    margin-bottom: 2rem;
+    background-color: $pink-clr;
+    border-radius: 1rem;
+
+    i {
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: $yellow-clr;
+    }
+  }
+
+  &-trust {
+    @include flex($jcnt: center, $gap: 3rem);
+    padding: 2rem;
+  }
+
+  hr {
+    width: 95%;
+    border: 1px solid $cyan-clr;
+    margin: 0 auto;
+  }
+
+  p {
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: $gray-clr;
+  }
+}

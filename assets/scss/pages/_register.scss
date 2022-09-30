@@ -1,0 +1,185 @@
+.container {
+  @include flex($fdir: column);
+  height: 100vh;
+  max-width: calc($max-width);
+  margin: 0 auto;
+
+  .login,
+  .register {
+    width: 100%;
+  }
+
+  .login {
+    background: $gradient-clr;
+    padding: 6rem 0 4rem;
+    @include flex($fdir: column, $jcnt: center, $aitem: center, $gap: 5rem);
+
+    .content {
+      @include flex($fdir: column, $jcnt: center, $aitem: center, $gap: 3rem);
+      color: $pink-clr;
+      font-weight: 300;
+      font-size: 1.2rem;
+
+      a {
+        color: $yellow-clr;
+        background-color: $white-clr;
+        padding: 0.6rem 6rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .register {
+    @include flex($fdir: column);
+    padding: 0 5%;
+    margin: 0 auto;
+
+    form .wrapper {
+      color: $gray-clr;
+      @include flex($fdir: column, $gap: 1rem);
+
+      .select-wrapper select {
+        color: $pink-clr;
+        font-size: 1.3rem;
+        font-weight: 500;
+
+        option {
+          color: $gray-clr;
+        }
+      }
+
+      .heading {
+        padding: 2rem 0 1rem;
+        .title {
+          padding: 0 2rem;
+          font-size: 1.2rem;
+          font-weight: 300;
+          &::before {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .upload-file {
+        @include flex($gap: 1rem);
+
+        input[type="file"] {
+          display: none;
+        }
+
+        span {
+          cursor: pointer;
+          background-color: $gray-clr-3;
+          color: $gray-clr;
+          font-weight: 200;
+          padding: 0.8rem 1rem;
+          font-size: 1.1rem;
+          font-family: inherit;
+          border-radius: 7px;
+        }
+
+        .lbl {
+          flex: 1;
+        }
+
+        .btn {
+          background-color: $pink-clr;
+          color: $yellow-clr-2;
+          font-size: 1.2rem;
+          font-weight: 400;
+          padding: 0.8rem 1rem;
+        }
+      }
+
+      .alert {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        color: $gray-clr;
+        i {
+          font-size: 1.2rem;
+          color: $yellow-clr;
+          padding-left: 0.5rem;
+        }
+      }
+
+      label {
+        input[type="radio"],
+        input[type="checkbox"] {
+          visibility: hidden;
+          cursor: pointer;
+          color: $yellow-clr;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            visibility: visible;
+            content: "";
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid $yellow-clr;
+            border-radius: 3px;
+          }
+
+          &:checked::after {
+            background-color: $yellow-clr;
+          }
+        }
+      }
+
+      .gender {
+        @include flex($aitem: center, $gap: 1rem);
+        font-size: 1.2rem;
+        color: $pink-clr;
+        font-weight: 400;
+
+        span {
+          flex: 1;
+        }
+
+        label {
+          cursor: pointer;
+          @include flex($aitem: center, $gap: 1rem);
+          text-align: center;
+        }
+
+        input[type="radio"]::after {
+          border-radius: 1.5rem;
+        }
+      }
+
+      .terms {
+        font-size: 1.2rem;
+        color: $pink-clr;
+        font-weight: 300;
+        padding: 1rem 0 2rem;
+        @include flex($aitem: center, $gap: 0.5rem);
+        a {
+          font-weight: 300;
+          color: $yellow-clr;
+          text-decoration: underline;
+        }
+      }
+
+      button[type="submit"] {
+        @extend %formBtn;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .register {
+      width: 90%;
+    }
+  }
+
+  @include breakpoint(md) {
+    flex-direction: row;
+
+    .register {
+      padding: 5rem 5%;
+      overflow-y: auto;
+    }
+  }
+}

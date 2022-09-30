@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>تماس با ما</title>
+  </head>
+
+  <body>
+    <div class="contact-us">
+      <!-- contact header -->
+      <header class="header">
+        <!-- header menu -->
+        <div class="header-menu">
+          <!-- menu brand -->
+          <div class="brand">
+            <a href="#"><img src="assets/images/logo.png" alt="logo" /></a>
+          </div>
+          <!-- menu navigations -->
+          <nav class="nav">
+            <!-- navigations lists -->
+            <ul>
+              <li><a href="index.html">صفحه اصلی</a></li>
+              <li><a href="#">کارجو</a></li>
+              <li><a href="#">کارفرما</a></li>
+              <li><a href="#">درباره ما</a></li>
+              <li class="is-active">
+                <a href="contact-us.html">تماس با ما</a>
+              </li>
+              <li><a href="#">وبلاگ</a></li>
+            </ul>
+            <!-- menu buttons -->
+            <div class="buttons">
+              <a href="#">ورود</a>
+              <span class="sep"></span>
+              <a href="register.html">ثبت نام</a>
+            </div>
+          </nav>
+
+          <!-- nav toggle -->
+          <div class="toggle">
+            <div class="top"></div>
+            <div class="mid"></div>
+            <div class="btm"></div>
+          </div>
+        </div>
+      </header>
+      <!-- contact-us content -->
+      <main class="content">
+        <!-- content contact -->
+        <section class="contact">
+          <!-- contact heading -->
+          <div class="heading">
+            <h2 class="title">تماس با ما</h2>
+          </div>
+          <!--  wrapper -->
+          <div class="wrapper">
+            <!-- map -->
+            <div class="map">
+              <iframe
+                src="https://maps.google.com/maps?q=%D8%AA%D9%87%D8%B1%D8%A7%D9%86&z=13&output=embed"
+                height="300"
+                width="500"
+              ></iframe>
+            </div>
+            <!-- info -->
+            <div class="info">
+              <div class="info-box">
+                اطلاعات تماس
+                <br />
+                <br />
+                <div class="data"><i class="fas fa-phone"></i>۰۲۱-۱۲۳۴۵۶۷۸</div>
+                <div class="data">
+                  <i class="fas fa-envelope"></i>info@example.ir
+                </div>
+                <div class="data">
+                  <i class="fas fa-map-marker-alt"></i>تهران دانشگاه ازاد
+                </div>
+              </div>
+
+              <div class="info-box">
+                شبکه های اجتماعی
+                <div class="info-social">
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-whatsapp"></i>
+                  <i class="fab fa-telegram"></i>
+                  <i class="fas fa-film"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="send-msg">
+          <!-- send-msg heading -->
+          <div class="heading">
+            <h2 class="title">فرم تماس با ما</h2>
+          </div>
+
+          <form action="#" method="post">
+            <div class="wrapper">
+              <div class="form-box">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="نام و نام خانوادگی"
+                  required
+                />
+
+                <input type="email" name="email" placeholder="ایمیل" required />
+
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="موضوع پیام"
+                  required
+                />
+              </div>
+
+              <textarea
+                name="message"
+                id="msg"
+                rows="8"
+                placeholder="پیام شما"
+                required
+              ></textarea>
+              <button type="submit">ارسال پیام</button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" />
+        </div>
+        <div class="footer-logo">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-whatsapp"></i>
+          <i class="fab fa-telegram"></i>
+          <i class="fas fa-film"></i>
+        </div>
+        <div class="footer-trust">
+          <img src="assets/images/footer/1.png" />
+          <img src="assets/images/footer/2.png" />
+        </div>
+        <hr />
+        <p>کلیه حقوق این سایت متعلق به شرکت میباشد</p>
+      </footer>
+    </div>
+    <!-- header script -->
+    <script src="assets/js/header.js"></script>
+  </body>
+</html>

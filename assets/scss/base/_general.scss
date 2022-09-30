@@ -1,0 +1,163 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
+%card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1rem 2rem;
+
+  @include breakpoint(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+%formInputText {
+  background-color: $gray-clr-3;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  border-radius: 7px;
+  font-family: inherit;
+  line-height: inherit;
+
+  &::placeholder {
+    color: $gray-clr;
+  }
+}
+
+%formSelect {
+  select {
+    cursor: pointer;
+    background-color: $gray-clr-3;
+    color: $gray-clr;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 7px;
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-family: inherit;
+    line-height: inherit;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    & option:disabled {
+      display: none;
+    }
+  }
+}
+
+%formSelectWrapper {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: $yellow-clr;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3rem;
+    @include flex($jcnt: center, $aitem: center);
+  }
+
+  @extend %formSelect;
+}
+
+input[type="text"],
+input[type="phone"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @extend %formInputText;
+  resize: vertical;
+}
+
+.select-wrapper {
+  @extend %formSelectWrapper;
+}
+
+%formBtn {
+  cursor: pointer;
+  background-color: $yellow-clr;
+  padding: 0.8rem 1.5rem;
+  border-radius: 7px;
+  font-size: 1.4rem;
+}
+
+section {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  .heading {
+    @include flex($jcnt: space-between);
+    padding: 2rem 0;
+
+    .title {
+      position: relative;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: $pink-clr;
+      padding: 0 3rem;
+
+      &::before {
+        content: "\f0d9";
+        font-family: "Font Awesome 5 Free";
+        color: $yellow-clr;
+        font-weight: 900;
+        font-size: 3rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        @include flex($jcnt: center, $aitem: center);
+      }
+    }
+
+    a {
+      color: $yellow-clr;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      &:hover {
+        color: $pink-clr;
+        span {
+          color: $yellow-clr;
+        }
+      }
+
+      span {
+        color: $pink-clr;
+      }
+    }
+
+    @include breakpoint(sm) {
+      .title {
+        font-size: 1.4rem;
+      }
+    }
+
+    @include breakpoint(md) {
+      .title {
+        font-size: 1.7rem;
+      }
+
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

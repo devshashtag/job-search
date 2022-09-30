@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <title>طراحی سایت</title>
+</head>
+
+<body>
+  <div class="home">
+    <!-- home header -->
+    <header class="header header-home">
+      <!-- header menu -->
+      <div class="header-menu">
+        <!-- menu brand -->
+        <div class="brand">
+          <a href="#"><img src="assets/images/logo.png" alt="logo" /></a>
+        </div>
+        <!-- menu navigations -->
+        <nav class="nav">
+          <!-- navigations lists -->
+          <ul>
+            <li class="is-active"><a href="index.html">صفحه اصلی</a></li>
+            <li><a href="#">کارجو</a></li>
+            <li><a href="#">کارفرما</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="contact-us.html">تماس با ما</a></li>
+            <li><a href="#">وبلاگ</a></li>
+          </ul>
+          <!-- menu buttons -->
+          <div class="buttons">
+            <a href="#">ورود</a>
+            <span class="sep"></span>
+            <a href="register.html">ثبت نام</a>
+          </div>
+        </nav>
+
+        <!-- nav toggle -->
+        <div class="toggle">
+          <div class="top"></div>
+          <div class="mid"></div>
+          <div class="btm"></div>
+        </div>
+      </div>
+      <!-- header content -->
+      <div class="header-content">
+        <h4 class="title">لورم ایپسوم متن ساختگی</h4>
+        <div class="text">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
+          در شصت و سه درصد گذشته، حال و آینده شناخت
+        </div>
+        <div class="search">
+          <form action="index.html" method="post">
+            <div class="form-box">
+              <input type="text" name="job_title" placeholder="عنوان شغل/مهارت" required />
+              <div class="select-wrapper">
+                <select name="category" id="category" required>
+                  <i class="fa fa-angle-down"></i>
+                  <option value="" disabled selected>دسته شغلی</option>
+                  <option value="web_developer">توسعه دهنده وب</option>
+                  <option value="graphic_designer">طراح گرافیک</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-box">
+              <div class="select-wrapper">
+                <select name="city" id="city" required>
+                  <i class="fa fa-angle-down"></i>
+                  <option value="" disabled selected>
+                    در کجا؟ (شهر / شهرستان)
+                  </option>
+                  <option value="tehran">تهران</option>
+                  <option value="isfahan">اصفهان</option>
+                </select>
+              </div>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- home content -->
+    <main class="home-content">
+      <!-- content jobs -->
+      <section class="content-jobs">
+        <!-- jobs heading -->
+        <div class="heading">
+          <h2 class="title">تازه ترین فرصت های شغلی</h2>
+          <a href="#">نمایش بیشتر <span>...</span></a>
+        </div>
+        <!-- jobs cards -->
+        <div class="cards">
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/jobs/4.png" />
+            </div>
+            <div class="title">عنوان اگهی</div>
+            <div class="description">
+              <div><i class="fas fa-briefcase"></i>عنوان شغل</div>
+              <div><i class="fas fa-building"></i>نام سازمان</div>
+              <div><i class="fas fa-user"></i>تعداد افراد</div>
+              <div><i class="fas fa-map-marker-alt"></i>استان و شهر</div>
+              <div><i class="fas fa-handshake"></i>نوع همکاری</div>
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div class="icons">
+                <i class="fas fa-bookmark"></i>
+                <i class="fa fa-share-alt"></i>
+              </div>
+              <div class="date">۱ روز پیش</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/jobs/3.png" />
+            </div>
+            <div class="title">عنوان اگهی</div>
+            <div class="description">
+              <div><i class="fas fa-briefcase"></i>عنوان شغل</div>
+              <div><i class="fas fa-building"></i>نام سازمان</div>
+              <div><i class="fas fa-user"></i>تعداد افراد</div>
+              <div><i class="fas fa-map-marker-alt"></i>استان و شهر</div>
+              <div><i class="fas fa-handshake"></i>نوع همکاری</div>
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div class="icons">
+                <i class="fas fa-bookmark"></i>
+                <i class="fa fa-share-alt"></i>
+              </div>
+              <div class="date">۱ روز پیش</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/jobs/2.png" />
+            </div>
+            <div class="title">عنوان اگهی</div>
+            <div class="description">
+              <div><i class="fas fa-briefcase"></i>عنوان شغل</div>
+              <div><i class="fas fa-building"></i>نام سازمان</div>
+              <div><i class="fas fa-user"></i>تعداد افراد</div>
+              <div><i class="fas fa-map-marker-alt"></i>استان و شهر</div>
+              <div><i class="fas fa-handshake"></i>نوع همکاری</div>
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div class="icons">
+                <i class="fas fa-bookmark"></i>
+                <i class="fa fa-share-alt"></i>
+              </div>
+              <div class="date">۱ روز پیش</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/jobs/1.png" />
+            </div>
+            <div class="title">عنوان اگهی</div>
+            <div class="description">
+              <div><i class="fas fa-briefcase"></i>عنوان شغل</div>
+              <div><i class="fas fa-building"></i>نام سازمان</div>
+              <div><i class="fas fa-user"></i>تعداد افراد</div>
+              <div><i class="fas fa-map-marker-alt"></i>استان و شهر</div>
+              <div><i class="fas fa-handshake"></i>نوع همکاری</div>
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div class="icons">
+                <i class="fas fa-bookmark"></i>
+                <i class="fa fa-share-alt"></i>
+              </div>
+              <div class="date">۱ روز پیش</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- content site-features -->
+      <section class="site-features">
+        <div class="heading">
+          <h2 class="title">ویژگی های وبسایت</h2>
+        </div>
+        <div class="items">
+          <div class="item">
+            <i class="far fa-user"></i>
+            <p>ایجاد حساب کاربری به عنوان کارجو و کارفرما</p>
+          </div>
+
+          <div class="item">
+            <i class="far fa-file-alt"></i>
+            <p>ثبت رزومه و ثبت درخواست شغلی</p>
+          </div>
+
+          <div class="item">
+            <i class="fas fa-briefcase"></i>
+            <p>ثبت اگهی و ایجاد فرصت شغلی</p>
+          </div>
+
+          <div class="item">
+            <i class="far fa-comment"></i>
+            <p>ایجاد گفتگو بین کارفرماو کارجو</p>
+          </div>
+        </div>
+      </section>
+      <!-- content blog -->
+      <section class="content-blog">
+        <!-- blog heading -->
+        <div class="heading">
+          <h2 class="title">آخرین مطالب وبلاگ ما</h2>
+          <a href="#">نمایش بیشتر <span>...</span></a>
+        </div>
+        <!-- blog posts -->
+        <div class="cards">
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/blog-card.png" />
+            </div>
+            <div class="title">عنوان مطلب</div>
+            <div class="description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div>۱ روز پیش</div>
+              <a href="#">بیشتر...</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/blog-card.png" />
+            </div>
+            <div class="title">عنوان مطلب</div>
+            <div class="description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div>۱ روز پیش</div>
+              <a href="#">بیشتر...</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/blog-card.png" />
+            </div>
+            <div class="title">عنوان مطلب</div>
+            <div class="description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div>۱ روز پیش</div>
+              <a href="#">بیشتر...</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="logo">
+              <img src="assets/images/blog-card.png" />
+            </div>
+            <div class="title">عنوان مطلب</div>
+            <div class="description">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با
+            </div>
+            <hr />
+            <div class="card-footer">
+              <div>۱ روز پیش</div>
+              <a href="#">بیشتر...</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" />
+      </div>
+      <div class="footer-logo">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-telegram"></i>
+        <i class="fas fa-film"></i>
+      </div>
+      <div class="footer-trust">
+        <img src="assets/images/footer/1.png" />
+        <img src="assets/images/footer/2.png" />
+      </div>
+      <hr />
+      <p>کلیه حقوق این سایت متعلق به شرکت میباشد</p>
+    </footer>
+  </div>
+
+  <!-- header script -->
+  <script src="assets/js/header.js"></script>
+</body>
+
+</html>

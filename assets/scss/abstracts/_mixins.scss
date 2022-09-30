@@ -1,0 +1,95 @@
+// @include breakpoint(sm){ font-size: 20px; }
+@mixin breakpoint($class) {
+  @if ($class == xs) {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if ($class == sm) {
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if ($class == md) {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if ($class == lg) {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if ($class == xl) {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($class == xxl) {
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
+  } @else if ($class == elg) {
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+  } @else if ($class == exl) {
+    @media screen and (min-width: 1800px) {
+      @content;
+    }
+  } @else if ($class == exxl) {
+    @media screen and (min-width: 2000px) {
+      @content;
+    }
+  } @else if ($class == mlg) {
+    @media screen and (min-width: 2200px) {
+      @content;
+    }
+  } @else if ($class == mxl) {
+    @media screen and (min-width: 2400px) {
+      @content;
+    }
+  } @else {
+    @warn "breakpoint mixin supports: xs, sm, md, lg, xl, xxl";
+  }
+}
+
+// @include transition(transform 2s ease-out, opacity 1s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// @include transform(translateX(10rem), translateY(1rem));
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+// @include flex($fdir: row,$jcnt: center,$aitem:center, $gap:0);
+@mixin flex(
+  $dsp: flex,
+  $fdir: def,
+  $jcnt: def,
+  $aitem: def,
+  $fwrap: def,
+  $gap: def
+) {
+  display: $dsp;
+  @if ($fdir != def) {
+    flex-direction: $fdir;
+  }
+  @if ($jcnt != def) {
+    justify-content: $jcnt;
+  }
+  @if ($aitem != def) {
+    align-items: $aitem;
+  }
+  @if ($fwrap != def) {
+    flex-wrap: $fwrap;
+  }
+  @if ($gap != def) {
+    gap: $gap;
+  }
+}
