@@ -326,7 +326,7 @@ section .heading a span {
 }
 @media screen and (max-width: 992px) {
   .header .header-menu .nav {
-    background: #210231c0;
+    background: rgba(33, 2, 49, 0.7529411765);
     z-index: 1;
   }
   .header .header-menu .nav.is-active {
@@ -481,6 +481,7 @@ section .heading a span {
   background: url("../images/header-bg.png") no-repeat;
   background-size: auto 0;
   background-position: bottom right 10%;
+  max-width: 118rem;
 }
 .header-home .header-content {
   display: flex;
